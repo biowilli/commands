@@ -1,14 +1,11 @@
 # Unix commands
 
+lsb_release -a
+
+
 | Command          | Description                                                            |
 | ---------------- | ---------------------------------------------------------------------- |
-| pwd              | Print the working directory                                            |
-| cd dirname       | Change directory to the one called "dirname"                           |
-| cd ..            | Change to the parent directory of the current directory                |
-| cd ~             | Change to your home directory                                          |
-| mkdir dirname    | Makes a new directory with name "dirname"                              |
-| rmdir dirname    | Removes the directory with name "dirname". The directory must be empty |
-| rmdir -r dirname | Recursively removes directories and subdirectories                     |
+| lsb_release -a | version of a Linux distribution in general. For Ubuntu, Debian and related distributions.                                          |
 
 ## Listing files
 
