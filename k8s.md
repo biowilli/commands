@@ -1,5 +1,9 @@
 # k8s commands
 
+show documentation: 
+kubectl explain <ressource>
+(pod, hba, ...)
+
 deploy kustomize:
 kubectl kustomize . | kubectl apply -f - -n <namespace> 
 
@@ -20,4 +24,5 @@ kubectl get deployments -n <namespace>
 
 delete deployment:
 kubectl delete deployment <deploymentname> -n <namespace>
+
 
