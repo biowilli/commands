@@ -25,4 +25,6 @@ kubectl get deployments -n <namespace>
 delete deployment:
 kubectl delete deployment <deploymentname> -n <namespace>
 
+delete pod:
+kubectl delete pod <podname> -n <namespace>
 
