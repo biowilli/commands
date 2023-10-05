@@ -2,10 +2,9 @@
 
 lsb_release -a
 
-
-| Command          | Description                                                            |
-| ---------------- | ---------------------------------------------------------------------- |
-| lsb_release -a | version of a Linux distribution in general. For Ubuntu, Debian and related distributions.                                          |
+| Command        | Description                                                                               |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| lsb_release -a | version of a Linux distribution in general. For Ubuntu, Debian and related distributions. |
 
 ## Listing files
 
