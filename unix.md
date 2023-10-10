@@ -6,36 +6,48 @@
 | lsb_release -a | version of a Linux distribution in general. For Ubuntu, Debian and related distributions. |
 | cat /etc/issue | version of a distribution.|
 
+## Folders
+
+| Command            | Description                                         |
+| ------------------ | ----------------------------------------------      |
+| `mkdir foldername` | Creates a new folder with the specified `foldername` |
+| `rmdir foldername` | Removes an empty folder with the specified `foldername` |
+| `rm -r foldername` | Deletes a folder and its contents (recursively) |
+| `cd`     | current working directory to home s:~$  |
+| `cd directory`     | Changes the current working directory to `directory` |
+| `pwd`              | Prints the path of the current working directory |
+| `ls`               | Lists the files and folders in the current directory |
+
 
 ## Listing files
 
 | Command | Description                                                                              |
 | ------- | ---------------------------------------------------------------------------------------- |
-| ls      | list files in current directory                                                          |
-| ls -l   | list files in a long format                                                              |
-| ls -a   | list all files (including hidden files) in current directory                             |
-| ls -F   | adds indicators to the list output to identify directories and different types of files. |
+| `ls`      | list files in current directory                                                          |
+| `ls -l`   | list files in a long format                                                              |
+| `ls -a`   | list all files (including hidden files) in current directory                             |
+| `ls -F`   | adds indicators to the list output to identify directories and different types of files. |
 
 ## Files
 
 | Command        | Description                                  |
 | -------------- | -------------------------------------------- |
-| cp file1 file2 | Makes a copy of `file1` and names it `file2` |
-| mv file1 file2 | Moves (renames) `file1` to `file2`           |
-| rm file1       | Removes (deletes) `file1`                    |
-| rm -i file1    | Asks for confirmation to delete `file1`      |
+| `cp file1 file2` | Makes a copy of `file1` and names it `file2` |
+| `mv file1 file2` | Moves (renames) `file1` to `file2`           |
+| `rm file1`       | Removes (deletes) `file1`                    |
+| `rm -i file1`    | Asks for confirmation to delete `file1`      |
 
 ## Text Files
 
 | Command        | Description                                                              |
 | -------------- | ------------------------------------------------------------------------ |
-| cat file1      | Writes the contents of `file1` to the terminal                           |
-| more file1     | Displays the contents of `file1` one page at a time                      |
-| less file1     | A more versatile version of `more`, but less common                      |
-| head -30 file1 | Shows the first 30 lines of `file1`                                      |
-| tail -25 file1 | Shows the last 25 lines of `file1`                                       |
-| tail -f file1  | Shows the last few lines of `file1` and keeps updating as the file grows |
-| wc file1       | Counts the number of lines, words, and characters in `file1`             |
+| `cat file1`      | Writes the contents of `file1` to the terminal                           |
+| `more file1`     | Displays the contents of `file1` one page at a time                      |
+| `less file1`     | A more versatile version of `more`, but less common                      |
+| `head -30 file1` | Shows the first 30 lines of `file1`                                      |
+| `tail -25 file1` | Shows the last 25 lines of `file1`                                       |
+| `tail -f file1`  | Shows the last few lines of `file1` and keeps updating as the file grows |
+| `wc file1`       | Counts the number of lines, words, and characters in `file1`             |
 
 ## CRON
 
@@ -45,8 +57,7 @@
 | `crontab -l -u USERNAME`  | Displays the Cron jobs of another user.                    |
 | `crontab -e`             | Opens the text editor for editing Cron jobs.              |
 | `crontab -e -u USERNAME`  | Opens the text editor for editing Cron jobs of another user. |
-| Crontab File Format:
-* * * * Command to be executed      | Here is an explanation for each field:
+| Crontab File Format: `* * * * Command to be executed` | Here is an explanation for each field:
 
     Minute (0 - 59): The first field indicates in which minute the job will be executed. An asterisk (*) means that the job will be executed in every minute.
 
@@ -68,10 +79,10 @@ However, if you need more control over the user account creation process, userad
 
 | Command        | Description                                                                               |
 | -------------- | ----------------------------------------------------------------------------------------- |
-| useradd <username> | is a low-level command used for adding user accounts. |
-| adduser <username> | is a higher-level command designed to simplify the process of adding user accounts. |
-| su <username>  | change user |
-| whoami | Displays the username of the current user. |
+| `useradd <username>` | is a low-level command used for adding user accounts. |
+| `adduser <username>` | is a higher-level command designed to simplify the process of adding user accounts. |
+| `su <username>`  | change user |
+| `whoami` | Displays the username of the current user. |
 
 ## ssh-keygen
 
@@ -110,48 +121,48 @@ authorized_keys wird der öffentliche key gespeichert
 
 |Command                 | Description
 ------------------------|------------------------------------------------|
-|ifconfig                | Displays network interface configuration.|
-|ping host               | Tests network connectivity to a host.|
-|traceroute host         | Traces the route to a host and displays network hops.|
-|netstat -r              | Shows the routing table.|
-|dig domain              | Performs DNS lookups for a domain.|
-|nslookup host           | Queries DNS servers for host information.|
-|ip addr show          | Shows IP addresses associated with network interfaces.|
-|ip link show          | Displays network interface information.|
-|ip route show         | Shows the routing table.|
-|ip route add          | Adds a route to the routing table.|
-|ip route delete       | Deletes a route from the routing table.|
-|ip neigh show         | Displays the neighbor table (ARP cache).|
-|ip neigh add          | Adds an entry to the neighbor table.|
-|ip neigh delete       | Deletes an entry from the neighbor table.|
-|ip tunnel add         | Creates a tunnel device.|
-|ip tunnel delete      | Deletes a tunnel device.|
+|`ifconfig`                | Displays network interface configuration.|
+|`ping host`               | Tests network connectivity to a host.|
+|`traceroute host`         | Traces the route to a host and displays network hops.|
+|`netstat -r`              | Shows the routing table.|
+|`dig domain`              | Performs DNS lookups for a domain.|
+|`nslookup host`           | Queries DNS servers for host information.|
+|`ip addr show`          | Shows IP addresses associated with network interfaces.|
+|`ip link show`          | Displays network interface information.|
+|`ip route show`         | Shows the routing table.|
+|`ip route add`          | Adds a route to the routing table.|
+|`ip route delete`       | Deletes a route from the routing table.|
+|`ip neigh show`         | Displays the neighbor table (ARP cache).|
+|`ip neigh add`          | Adds an entry to the neighbor table.|
+|`ip neigh delete`       | Deletes an entry from the neighbor table.|
+|`ip tunnel add`         | Creates a tunnel device.|
+|`ip tunnel delete`      | Deletes a tunnel device.|
 
 ## iptables
 
 |Command                 | Description
 |------------------------|------------------------------------------------|
-|iptables -L             | Lists current firewall rules and chains.|
-|iptables -A chain rule  | Appends a rule to a specified chain.|
-|iptables -D chain rule  | Deletes a rule from a specified chain.|
-|iptables -P chain target | Sets the default policy for a chain.|
-|iptables -N chain       | Creates a new user-defined chain.|
-|iptables -F chain       | Flushes (deletes) all rules in a chain.|
-|iptables-save           | Saves current firewall rules to a file.|
-|iptables-restore        | Restores firewall rules from a file.|
-|iptables -S             | Displays a saveable rule set (all tables).|
-|iptables -I chain rule  | Inserts a rule to a specified chain.|
-|iptables -R chain rule  | Replaces a rule in a specified chain.|
-|iptables -X chain       | Deletes a user-defined chain.|
-|iptables -Z chain       | Zeroes the packet and byte counters in a chain.|
+|`iptables -L`             | Lists current firewall rules and chains.|
+|`iptables -A chain rule`  | Appends a rule to a specified chain.|
+|`iptables -D chain rule`  | Deletes a rule from a specified chain.|
+|`iptables -P chain target` | Sets the default policy for a chain.|
+|`iptables -N chain`       | Creates a new user-defined chain.|
+|`iptables -F chain`       | Flushes (deletes) all rules in a chain.|
+|`iptables-save`           | Saves current firewall rules to a file.|
+|`iptables-restore`        | Restores firewall rules from a file.|
+|`iptables -S`             | Displays a saveable rule set (all tables).|
+|`iptables -I chain rule`  | Inserts a rule to a specified chain.|
+|`iptables -R chain rule`  | Replaces a rule in a specified chain.|
+|`iptables -X chain`       | Deletes a user-defined chain.|
+|`iptables -Z chain`       | Zeroes the packet and byte counters in a chain.|
 
 ## telnet
 
 |Command                 | Description
 |------------------------|------------------------------------------------|
-|telnet host             | Initiates a Telnet session to a remote host.|
-|telnetd                 | Telnet server daemon for remote access.|
-|telnet localhost        | Connects to the local host via Telnet.|
+|`telnet host`             | Initiates a Telnet session to a remote host.|
+|`telnetd`                 | Telnet server daemon for remote access.|
+|`telnet localhost`        | Connects to the local host via Telnet.|
 
 ## Logfiles
 
@@ -170,5 +181,3 @@ authorized_keys wird der öffentliche key gespeichert
 |/var/log/dmesg            | Kernel logs generated during system boot and hardware detection.|
 |/var/log/boot.log         | Logs information about system startup.|
 |/var/log/mail.log         | Logs email-related events and messages (e.g., Postfix mail server).|
-
-nur cd geht mi to home s:~$ 
