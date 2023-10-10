@@ -46,5 +46,16 @@ kubectl get ns
 | kubectl delete deployment <deploymentname> -n <namespace> | Deletes a specific deployment in a specific namespace. |
 | kubectl delete pod <podname> -n <namespace>   | Deletes a specific pod in a specific namespace. |
 | kubectl get ns                               | Lists all namespaces in the Kubernetes cluster. |
+| kubectl get nodes                           | Lists all nodes in the Kubernetes cluster. |
+| kubectl get services -n <namespace>         | Lists services in a specific namespace. |
+| kubectl get configmaps -n <namespace>       | Lists configmaps in a specific namespace. |
+| kubectl get secrets -n <namespace>          | Lists secrets in a specific namespace. |
+| kubectl get pods --all-namespaces            | Lists all pods in all namespaces. |
+| kubectl scale deployment <deploymentname> --replicas=<num> -n <namespace> | Scales the number of replicas for a deployment in a specific namespace. |
+| kubectl apply -f <file.yaml> -n <namespace>  | Applies Kubernetes resources defined in a YAML file to a specific namespace. |
+| kubectl edit deployment <deploymentname> -n <namespace> | Opens the deployment configuration in an editor for editing. |
+| kubectl get ingresses -n <namespace>        | Lists ingresses in a specific namespace. |
+| kubectl describe ingress <ingressname> -n <namespace> | Provides detailed information about an ingress in a specific namespace. |
+| kubectl rollout status deployment <deploymentname> -n <namespace> | Checks the status of a deployment rollout. |
 
 
