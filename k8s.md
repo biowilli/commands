@@ -58,4 +58,9 @@ kubectl get ns
 | kubectl describe ingress <ingressname> -n <namespace> | Provides detailed information about an ingress in a specific namespace. |
 | kubectl rollout status deployment <deploymentname> -n <namespace> | Checks the status of a deployment rollout. |
 
+Command | Description
+ |--- | --- |
+ |`kubectl cp -n <namespace> <pod>:/path/to/container/file /local/path/file` | Copies a file from a running Kubernetes Pod specified by `<pod>` in the `<namespace>` namespace to your local system. The file located at `/path/to/container/file` within the specified Pod is transferred to your local system at `/local/path/file`. |
+ |`kubectl cp -n <namespace> /local/path/file <pod>:/path/to/container/file` | Copies the file located at `/local/path/file` on your local system to a running Kubernetes Pod specified by `<pod>` in the `<namespace>` namespace. The file is placed inside the container at `/path/to/container/file` in the Pod. |
+
 
